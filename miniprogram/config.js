@@ -1,11 +1,11 @@
 module.exports = {
-  "appName":"深圳美食图鉴",
-  "mtaAppID": "500668228",
-  "mtaEventID":"500668246",
-  "envID":"demo-3ee737",
-  "mapSubKey":"URTBZ-FLY64-OVLUX-XHH4A-5DOGO-YKFFP",
-  "center_longitude": 113.921736,
-  "center_latitude": 22.538017,
+  "appName":"交大小帮手",
+  "mtaAppID": "500680233",
+  "mtaEventID":"500680252",
+  "envID":"sjtu-help-f7d259",
+  "mapSubKey":"GOSBZ-CH6LX-IJN4Y-7MN5F-E5MU6-ZOBEL",
+  "center_longitude": 121.4371633530,
+  "center_latitude": 31.0257974051,
   "dynamic_title":true,
   "show_admin":false,
   "default_scale":16

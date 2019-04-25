@@ -23,11 +23,11 @@ Page({
   loadData: function() {
     store.skip(this.data.numbers).get().then(res => {
       /**
-       * 如果没有数据，就提示没有商户了，并返回。
+       * 如果没有数据，就提示没有攻略了，并返回。
        */
       if (res.data.length == 0) {
         wx.showToast({
-          title: '没有别的店铺了！',
+          title: '没有别的攻略了！',
           icon: 'none'
         });
         return;

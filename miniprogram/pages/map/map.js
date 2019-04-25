@@ -49,7 +49,7 @@ Page({
       }, () => {
         wx.hideLoading();
         wx.showToast({
-          title: '双指缩放可以调整地图可视区域，查看更多美食',
+          title: '双指缩放可以调整地图可视区域，查看更多攻略',
           icon: 'none'
         })
       })
@@ -130,7 +130,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: '我在' + config.appName + '上发现了好吃的，你也看看吧！',
+      title: '我在' + config.appName + '上发现了好玩的，你也看看吧！',
       path: '/pages/map/map?_mta_ref_id=group',
       imageUrl: "/images/share.jpg"
     }

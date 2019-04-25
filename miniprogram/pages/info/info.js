@@ -68,7 +68,7 @@ Page({
         fileList: [this.data.store.images[0]],
         success: res =>{
           return {
-            title: '我在' + config.appName + '上发现了好吃的，你也看看吧！',
+            title: '我在' + config.appName + '上发现了好玩的，你也看看吧！',
             path: path,
             imageUrl: res.fileList[0].tempFileURL
           }
@@ -79,7 +79,7 @@ Page({
       })
     }else{
       return {
-        title: '我在' + config.appName + '上发现了好吃的，你也看看吧！',
+        title: '我在' + config.appName + '上发现了好玩的，你也看看吧！',
         path: path,
         imageUrl: image
       }

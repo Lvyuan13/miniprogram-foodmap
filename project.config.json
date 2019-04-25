@@ -10,7 +10,7 @@
 		"autoAudits": false,
 		"nodeModules": true
 	},
-	"appid": "wxd1ca70db507085dd",
+	"appid": "wx03113f8574cf55c7",
 	"projectname": "meishitujian",
 	"libVersion": "2.4.4",
 	"condition": {
@@ -40,7 +40,7 @@
 				},
 				{
 					"id": 1,
-					"name": "商铺详情",
+					"name": "攻略详情",
 					"pathName": "pages/info/info",
 					"query": "id=XE0cj8DR1TiNzjpY",
 					"scene": null
