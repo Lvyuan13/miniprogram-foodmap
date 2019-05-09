@@ -89,8 +89,8 @@ Page({
           if (res.result.data.is_administrator) {
             app.globalData.is_administrator = true;
             wx.showModal({
-              title: '管理员登陆成功',
-              content: '管理员您好，是否要进入新增界面？',
+              title: '登陆成功',
+              content: '尊敬的用户您好，您是否确定创建攻略',
               success: res => {
                 if (res.cancel == false && res.confirm == true) {
                   wx.navigateTo({

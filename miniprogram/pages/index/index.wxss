@@ -24,6 +24,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+
 }
 .search-text {
   color: #5f5d5d;

@@ -35,7 +35,7 @@ Page({
         title: "文学图书馆——包玉刚图书馆",
         postImg: "/images/post/post-2.jpg",
         avatar: "/images/avatar/avatar-2.png",
-        content: "轻轻地我走了",
+        content: "包玉刚不是李玉刚",
         readingNum: 92,
         collectionNum: {
           array: [108]

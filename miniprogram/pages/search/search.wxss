@@ -1,4 +1,4 @@
-.search_box{
+ .search_box{
   background-color: #eee;
   display: flex;
   padding:5rpx;

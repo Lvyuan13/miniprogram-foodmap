@@ -1,9 +1,12 @@
 <!--pages/index/index.wxml-->
 <!--pages/activity/index.wxml-->
 <view class="index">
-  <view class="index-hd" style="background-image:url(resources/map.png)"> </view>
-  <view class="search_box">
-    <input class='search_input' placeholder="请输入要搜索的关键词" bindinput="navigateToSearch" bindfocus="navigateToSearch"> ></input>
+  <view class="index-hd" style="background-image:url(resources/map.png)">
+    <button class="index-search" bindtap="search">
+      <!-- <image class='search-icon' src='resources/search-icon.png'></image> -->
+      <!-- <image class='search-icon' src='resources/search-icon.png'></image> -->
+      <view class="search-text"> 请输入您想去的目的地 </view>
+    </button>
   </view>
   <view class="index-md">当下热门目的地</view>
   <view class="index-buttonrow">
