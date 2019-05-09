@@ -11,8 +11,10 @@
 		"nodeModules": true
 	},
 	"appid": "wx03113f8574cf55c7",
-	"projectname": "meishitujian",
+	"projectname": "SJTU-help",
 	"libVersion": "2.4.4",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

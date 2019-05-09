@@ -13,7 +13,7 @@
   </view>
   <view class="two_column">
     <view class="contact" bindtap='callContact'>
-      {{store.contact}}</view>
+      联系方式：{{store.contact}}</view>
     <view class="star">
      评分: {{store.star}}/10</view>
   </view>
@@ -29,7 +29,7 @@
   <view class="notes">
     点评: {{store.notes}}</view>
 </view>
-
+<!-- 此处开始时判断是否为管理员，如果是管理员则具有删除权限 -->
 <block wx:if="{{is_administrator}}">
 <button class='button copy_path' bindtap='copyPath'>复制路径</button>
 <button class='button delete_item' bindtap='deleteItem'>删除攻略</button>
@@ -39,3 +39,4 @@
 <button class='button navigate' bindtap='navigate'>导航</button>
 </view>
 </block>
+<!-- 界面好丑，赶紧换 -->

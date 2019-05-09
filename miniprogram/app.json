@@ -1,10 +1,16 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/map/map",
     "pages/list/list",
     "pages/info/info",
     "pages/add/add",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/study/study",
+    "pages/work/work",
+    "pages/food/food",
+    "pages/travel/travel",
+    "pages/sport/sport"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -17,5 +23,6 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于创建新的攻略"
     }
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,69 @@
+/* pages/activity/index.wxss */
+
+.index-hd {
+  background-size: 100%;
+  width: 750rpx;
+  height: 600rpx;
+}
+.index-search::after {
+ border: none;
+}
+.index-search {
+  /* margin-left: 50rpx;
+  <image class='search-icon' src='resources/search-icon.png'></image>
+  
+  
+   */
+  margin-top: 400rpx;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 700rpx;
+  height: 80rpx;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.search-text {
+  color: #5f5d5d;
+  font-size: 30rpx;
+  text-align: left;
+}
+.search-icon {
+  margin-right: 200rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+.search_input{
+  background-color: #fff;
+  width: 100%;
+  height: 80rpx;
+}
+.index-md {
+  margin-top: 20rpx;
+  color: #4e5050;
+  font-size: 30rpx;
+  text-align: center;
+}
+.index-buttonrow {
+  padding-left: 8rpx;
+  margin-top: 30rpx;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.index-button {
+  background-size: 100%;
+  width: 220rpx;
+  height: 180rpx;
+}
+.button-text {
+  padding-top: 40rpx;
+  position: relative;
+  color: #f1f0f0;
+  font-size: 40rpx;
+  font-weight:bolder;
+  text-align: center;
+}
