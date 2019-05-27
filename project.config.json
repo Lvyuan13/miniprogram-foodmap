@@ -12,7 +12,7 @@
 	},
 	"appid": "wx03113f8574cf55c7",
 	"projectname": "SJTU-help",
-	"libVersion": "2.4.4",
+	"libVersion": "2.7.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

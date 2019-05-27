@@ -37,6 +37,7 @@ Page({
             }
           })
         }else{
+          // 已经授权了
           wx.chooseLocation({
             success: res => {
               this.setData({

@@ -84,7 +84,6 @@ Page({
         imageUrl: image
       }
     }
-    
   },
   callContact:function(event){
     wx.makePhoneCall({
