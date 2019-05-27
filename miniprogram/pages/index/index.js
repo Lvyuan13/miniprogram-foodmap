@@ -4,6 +4,7 @@ const app = getApp();
 const config = require('../../config.js');
 const db = wx.cloud.database()
 const store = db.collection('store');
+const picture = db.collection('picture');
 const userInfo = db.collection('userInfo');
 Page({
 
@@ -11,6 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    numbers: 0,
+    picture: []
 
   },
 
@@ -18,7 +21,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    mta.Page.init();
+    this.loadData();
   },
 
   /**
@@ -27,7 +31,24 @@ Page({
   onReady: function () {
 
   },
-
+  loadData: function () {
+    picture.skip(this.data.numbers).get().then(res => {
+      /**
+       * 如果没有数据，就提示没有攻略了，并返回。
+       */
+      // if (res.data.length == 0) {
+      //   wx.showToast({
+      //     title: '没有别的攻略了！',
+      //     icon: 'none'
+      //   });
+      //   return;
+      // }
+      this.setData({
+        picture: this.data.picture.concat(res.data),
+        numbers: this.data.numbers + res.data.length
+      });
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
@@ -108,6 +129,11 @@ Page({
   GotoMap:function(){
     wx.navigateTo({
       url: '../map/map',
+    })
+  },
+  search:function(){
+    wx.navigateTo({
+      url: '../search/search',
     })
   }
 
