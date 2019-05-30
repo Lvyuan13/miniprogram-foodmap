@@ -1,0 +1,77 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.0",
+	"appid": "wx03113f8574cf55c7",
+	"projectname": "SJTU-help",
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "全部内容",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "攻略详情",
+					"pathName": "pages/info/info",
+					"query": "id=XE0cj8DR1TiNzjpY",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增数据",
+					"pathName": "pages/add/add",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索页面",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

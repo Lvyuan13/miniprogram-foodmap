@@ -4,6 +4,8 @@
   background-size: 100%;
   width: 750rpx;
   height: 600rpx;
+  vertical-align: bottom;
+  z-index: -1;
 }
 .index-search::after {
  border: none;
@@ -11,20 +13,17 @@
 .index-search {
   /* margin-left: 50rpx;
   <image class='search-icon' src='resources/search-icon.png'></image>
-  
-  
    */
   margin-top: 400rpx;
   position: absolute;
   background-color: rgb(255, 255, 255);
-  width: 700rpx;
+  width: 740rpx;
   height: 80rpx;
   border-radius: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 
 }
 .search-text {
@@ -55,12 +54,33 @@
   /* position: absolute; */
   display: flex;
   flex-direction: row;
+  justify-content:space-around;
 }
+/* .index-button::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 560rpx;
+  height: 100%;
+  border-top-left-radius: 80rpx;
+  border-bottom-left-radius: 80rpx;
+  /* background: linear-gradient(to right,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 100%); */
+/* } */
 
 .index-button {
   background-size: 100%;
   width: 220rpx;
   height: 180rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  border-style:groove;
+  /* display: flex; */
+   /* justify-content: space-around； */
+   z-index: -1;
 }
 .button-text {
   padding-top: 40rpx;
@@ -69,4 +89,37 @@
   font-size: 40rpx;
   font-weight:bolder;
   text-align: center;
+}
+.info1{
+  position: absolute;
+  color: #fff;
+  font-size: 50rpx;
+  font-weight: bolder;
+  text-align: left;
+  left: 78rpx;
+  top: 60rpx;
+  right: 5; 
+  bottom: 0;
+}
+.info2{
+  position: absolute;
+  color: #fff;
+  font-size: 50rpx;
+  font-weight: bolder;
+  text-align: center;
+  left: 0;
+  top: 60rpx;
+  right: 0;
+  bottom: 0; 
+}
+.info3{
+  position: absolute;
+  color: #fff;
+  font-size: 50rpx;
+  font-weight: bolder;
+  text-align: right;
+  left: 0;
+  top: 60rpx;
+  right: 78rpx;
+  bottom: 0; 
 }

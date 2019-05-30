@@ -1,36 +1,51 @@
-<!--pages/index/index.wxml-->
-<!--pages/activity/index.wxml-->
 <view class="index">
-  <view class="index-hd" style="background-image:url({{picture.map}})">
-    <!-- <image class="index-hd" src="{{picture.map}}" /> -->
-     <!-- <image src="{{picture.map}}"  mode="aspectFit"  /> -->
-    <button class="index-search" bindtap="search">
-      <!-- <image class='search-icon' src='resources/search-icon.png'></image> -->
-      <!-- <image class='search-icon' src='resources/search-icon.png'></image> -->
-      <view class="search-text"> 请输入您想去的目的地 </view>
-    </button>
-  </view>
+  <button class="index-search" bindtap="search">
+    <view class="search-text"> 请输入您想去的目的地</view>
+  </button>
+  <image class="index-hd" src="{{picture.map}}">
+  </image>
   <view class="index-md">当下热门目的地</view>
   <view class="index-buttonrow">
-    <button class="index-button" plain='true' style="background-image:url({{picture.travel}})" bindtap="GoTOTravel">
-      <view class="button-text"> 旅游 </view>
-    </button>
-    <button class="index-button" plain='true' style="background-image:url({{picture.food}})" bindtap="GoTOFood">
-      <view class="button-text"> 美食 </view>
-    </button>
-    <button class="index-button" plain='true' style="background-image:url({{picture.sport}})" bindtap="GoTOSport">
-      <view class="button-text"> 运动 </view>
-    </button>
+    <navigator url="../travel/travel">
+      <image class="index-button" src="{{picture.travel}}" plain='true'>
+      </image>
+
+
+    </navigator>
+    <text class='info1'>旅游</text>
+    <text class='info2'>美食</text>
+    <text class='info3'>运动</text>
+
+    <navigator url="../food/food">
+      <image class="index-button" src="{{picture.food}}" plain='true'>
+      </image>
+      <!-- <text class='info'>美食</text> -->
+
+    </navigator>
+    <navigator url="../sport/sport">
+      <image class="index-button" src="{{picture.sport}}" plain='true'>
+      </image>
+
+    </navigator>
   </view>
+
   <view class="index-buttonrow">
-    <button class="index-button" plain='false' style="background-image:url({{picture.office}})" bindtap="GoTOOffice">
-      <view class="button-text"> 办公 </view>
-    </button>
-    <button class="index-button" plain='true' style="background-image:url({{picture.study}})" bindtap="GoTOStudy">
-      <view class="button-text"> 学习 </view>
-    </button>
-    <button class="index-button" plain='true' style="background-image:url({{picture.other}})" bindtap="GotoMap">
-      <view class="button-text"> 地图 </view>
-    </button>
+    <text class='info1'>办公</text>
+    <text class='info2'>学习</text>
+    <text class='info3'>地图</text>
+    <navigator url="../work/work">
+      <image class="index-button" src="{{picture.office}}" plain='false'>
+
+      </image>
+
+    </navigator>
+    <navigator url="../study/study">
+      <image class="index-button" src="{{picture.study}}" plain='true'></image>
+
+    </navigator>
+    <navigator url="../map/map">
+      <image class="index-button" src="{{picture.other}}" plain='true'></image>
+
+    </navigator>
   </view>
 </view>

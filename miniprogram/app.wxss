@@ -1,4 +1,6 @@
 @import "vendor/fontawesome.wxss";
+@import "vendor/fontawesome.wxss";
+@import "style/weui.wxss";
 .button {
   color: #fff;
   height: 100rpx;

@@ -1,1 +1,107 @@
-/* pages/food/food.wxss */
+.card {
+  border-bottom: 1rpx solid #cecece;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10rpx;
+}
+
+.card_contact {
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.card_infobar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card_title {
+  font-size: 30rpx;
+  font-weight: 300;
+  width: 600rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card_thumbsup {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.search_input {
+  background-color: #eee;
+  margin: 5px;
+  width: 730rpx;
+  height: 80rpx;
+}
+
+.input-placeholder {
+  text-align: center;
+}
+
+.choose {
+  text-align: left;
+  font-size: 95%;
+  background-color: #fff;
+  color: #0407228c;
+  right: 275rpx;
+}
+
+.choose::after {
+  border: none;
+}
+
+.top {
+  background-size: 100%;
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.top-text {
+  position: absolute;
+  color: #fff;
+  font-size: 50rpx;
+  font-weight: bolder;
+  text-align: center;
+  left: 0;
+  top: 140rpx;
+  right: 0;
+  bottom: 0;
+}
+
+.top-travel {
+  position: absolute;
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bolder;
+  text-align: center;
+  left: 0;
+  top: 200rpx;
+  right: 0;
+  bottom: 0;
+}
+
+.top-temp {
+  position: absolute;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: left;
+  left: 580rpx;
+  top: 300rpx;
+  right: 0;
+  bottom: 0;
+}
+
+.top-temp-img {
+  background-size: 100%;
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  text-align: left;
+  left: 525rpx;
+  top: 300rpx;
+  right: 0;
+  bottom: 0;
+}
