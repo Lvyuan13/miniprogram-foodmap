@@ -1,7 +1,7 @@
 const mta = require('../../vendor/mta_analysis.js');
 const app = getApp();
 const db = wx.cloud.database()
-const store = db.collection('store');
+const store = db.collection('study');
 Page({
 
   /**
@@ -9,7 +9,7 @@ Page({
    */
   data: {
     type: '选择一个类别吧',
-    array: ['米饭套餐类', '面食', '西餐', '蔬菜', '肉食', '汤/粥'],
+    array: ['图书馆', '自习室', '上课地点', '学术讲座'],
 
   },
 
@@ -19,14 +19,14 @@ Page({
   onLoad: function (options) {
     mta.Page.init();
   },
-  
+
   chooseLocation: function (event) {
     wx.getSetting({
       success: res => {
-        if (!res.authSetting['scope.userLocation']){
+        if (!res.authSetting['scope.userLocation']) {
           wx.authorize({
             scope: 'scope.userLocation',
-            success:res => {
+            success: res => {
               wx.chooseLocation({
                 success: res => {
                   this.setData({
@@ -39,7 +39,7 @@ Page({
               })
             }
           })
-        }else{
+        } else {
           wx.chooseLocation({
             success: res => {
               this.setData({
@@ -53,7 +53,7 @@ Page({
         }
       }
     })
-    
+
   },
 
   bindPickerChange: function (e) {

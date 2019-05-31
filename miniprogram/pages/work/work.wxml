@@ -1,10 +1,70 @@
-<!--pages/work/work.wxml-->
-<import src="../../components/trip/trip.wxml"/>
-<scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"  bindscrolltolower="loadMore" lower-threshold="100">
-  <block wx:for="{{ trips }}" wx:for-item="trip" wx:key="trip.data[0].id">
-    <template is="m-trip" wx:if="{{ trip.type === 4 }}" data="{{trip: trip.data[0], mode: 1}}" />
-  </block>
-  <view class="loading">
-    正在加载...
+<view class="top" style="background-image:url(../../images/work.jpg)">
+  <view class="top-text"> 工作 </view>
+  <view class="top-travel"> work </view>
+</view>
+<input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__ft">
+        <picker bindchange="bindPickerChange" value="{{type}}" range="{{array}}">
+          <view class="weui-cell weui-cell_access weui-cell_link">
+            <view class="weui-cell__bd">分类查看</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <view class="weui-cell__bd">职能机构简介</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">办事地点指南</view>
+      <view class="weui-panel__bd">
+        <block wx:for="{{stores}}" wx:key="_id">
+        <!-- 推荐三个场景 -->
+          <navigator wx:if="{{index<3}}" url="../info/info?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.images[0]}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.title}}</view>
+              <view class="weui-media-box__desc">{{item.notes}}</view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+      <view class="weui-panel__ft">
+        <navigator url="../list/list">
+          <view class="weui-cell weui-cell_access weui-cell_link">
+            <view class="weui-cell__bd">查看更多</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <button class='choose' open-type='getUserInfo' bindgetuserinfo='getUserInfo' bindlongpress='getOpenID' lang='zh_CN'>添加办事指南</button>
+        </view>
+      </view>
+    </view>
   </view>
-</scroll-view>
+</view>
+<!--block wx:for="{{stores}}" wx:key="_id">
+  <navigator url="../info/info?id={{item._id}}">
+    <view wx:if="{{item.star==5}}" class="card">
+      <view  class="card_contact">{{item.contact}}</view>
+      <view class="card_infobar">
+        <view class="card_title">{{item.title}}</view>
+        <view class="card_thumbsup">{{item.thumbs_up}}</view>
+      </view>
+    </view>
+  </navigator>
+</block-->

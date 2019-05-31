@@ -3,31 +3,30 @@
   <view class="loactionGroup">
     <button bindtap='chooseLocation' type='primary'>地图选址</button>
   </view>
-   <view class='desc'>店铺名称</view>
-  <input placeholder='请输入或选择店铺的名称' name="title" value='{{name}}'></input>
-  <!--checkbox-group bindchange="checkboxChange">
+   <view class='desc'>学习地点</view>
+  <input placeholder='请输入学习地点名称' name="title" value='{{name}}'></input>
   <label class="desc" wx:for="{{items}}">
     <checkbox value="{{item.name}}" checked="{{item.checked}}" />
     {{item.value}}
   </label>
-  </checkbox-group-->
 
-  <!--input placeholder='店铺的门牌号是？' name="type" value='{{type}}'></input-->
-  <view class='desc'>菜名设定</view>
-  <input placeholder='要点评的菜是？' name="contact" value='{{phone}}'></input>
-  <view class='desc'>种类</view>
+
+  <input placeholder='地址提示' name="type" value='{{type}}'></input>
+  <view class='desc'>环境点评</view>
+  <input placeholder='学习地怎么样' name="contact" value='{{phone}}'></input>
+  <view class='desc'>适合什么样的学习方式</view>
     <picker bindchange="bindPickerChange" value="{{type}}" range="{{array}}">                
           <view class='choose' >{{type}}</view>
     </picker>
   <view class='desc'>价格</view>
   <input placeholder='单位是元～' name="price_per" type="number" value='{{price_per}}'></input>
   <view class='desc'>关键词</view>
-  <input placeholder='比如，微辣，甜' name="keywords" value='{{price_per}}'></input>
+  <input placeholder='比如，安静，环境好' name="keywords" value='{{price_per}}'></input>
   <view class='desc'>个人点评</view>
-  <textarea placeholder='觉得这道菜怎么样呢？' name="notes" value="{{notes}}"></textarea>
+  <textarea placeholder='觉得在这里学习怎么样呢？' name="notes" value="{{notes}}"></textarea>
   <view class='desc'>评分（10分制）</view>
   <slider min="1" max="5" show-value name="star" value="10"></slider>
-  <view class='desc'>美食照片</view>
+  <view class='desc'>学习场景照片</view>
   <button bindtap='uploadImage'>点我选择照片</button>
   <button class='submit' type="primary" form-type='submit'>创建</button>
 </form>

@@ -1,7 +1,7 @@
 const mta = require('../../vendor/mta_analysis.js');
 const app = getApp();
 const db = wx.cloud.database()
-const store = db.collection('store');
+const store = db.collection('study');
 Page({
 
   /**
@@ -9,18 +9,22 @@ Page({
    */
   data: {
     numbers: 0,
-    stores: []
+    stores: [],
+    type:"",
+    array: ['图书馆', '自习室', '上课地点', '学术讲座']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
+    this.setData({
+      type: options.type
+    });
     mta.Page.init();
     this.loadData();
   },
-  loadData: function () {
+  loadData: function() {
     store.skip(this.data.numbers).get().then(res => {
       /**
        * 如果没有数据，就提示没有攻略了，并返回。
@@ -41,10 +45,18 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
     this.loadData();
   },
-  navigateToSearch: function (e) {
+  bindPickerChange: function (e) {
+    this.setData({
+      type: this.data.array[e.detail.value]
+    })
+    wx.navigateTo({
+      url: '../list/list?type=' + this.data.type,
+    })
+  },
+  navigateToSearch:function(e){
     wx.redirectTo({
       url: '../search/search',
     })

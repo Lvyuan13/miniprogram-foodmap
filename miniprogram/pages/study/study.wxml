@@ -1,22 +1,70 @@
-<!--pages/study/study.wxml-->
-<view>
-  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
-    <view class="post-container">
-      <view class="post-author-date">
-        <image src="{{item.avatar}}" />
-        <text>{{item.object.date}}</text>
-      </view>
-      <text class="post-title">{{item.title}}</text>
-      <image class="post-content" src="{{item.postImg}}" mode="aspectFill" />
-      <text class="post-content">{{item.content}}</text>
-      <view class="post-like">
-        <image src="/images/icon/wx_app_collect.png" />
-        <text>{{item.collectionNum.array[0]}}</text>
-        <image src="/images/icon/wx_app_view.png"></image>
-        <text>{{item.readingNum}}</text>
-      <image src="/images/icon/wx_app_message.png"></image>
-      <text>{{item.commentNum}}</text>
+<view class="top" style="background-image:url(../../images/study.jpg)">
+  <view class="top-text"> 学习 </view>
+  <view class="top-travel"> study </view>
+</view>
+<input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__ft">
+        <picker bindchange="bindPickerChange" value="{{type}}" range="{{array}}">
+          <view class="weui-cell weui-cell_access weui-cell_link">
+            <view class="weui-cell__bd">分类查看</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </picker>
       </view>
     </view>
-  </block>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <view class="weui-cell__bd">资源简介</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">学习地点推荐</view>
+      <view class="weui-panel__bd">
+        <block wx:for="{{stores}}" wx:key="_id">
+        <!-- 推荐三个场景 -->
+          <navigator wx:if="{{index<3}}" url="../info/info?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.images[0]}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.title}}</view>
+              <view class="weui-media-box__desc">{{item.notes}}</view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+      <view class="weui-panel__ft">
+        <navigator url="../list/list">
+          <view class="weui-cell weui-cell_access weui-cell_link">
+            <view class="weui-cell__bd">查看更多</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <button class='choose' open-type='getUserInfo' bindgetuserinfo='getUserInfo' bindlongpress='getOpenID' lang='zh_CN'>添加学习地点推荐</button>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
+<!--block wx:for="{{stores}}" wx:key="_id">
+  <navigator url="../info/info?id={{item._id}}">
+    <view wx:if="{{item.star==5}}" class="card">
+      <view  class="card_contact">{{item.contact}}</view>
+      <view class="card_infobar">
+        <view class="card_title">{{item.title}}</view>
+        <view class="card_thumbsup">{{item.thumbs_up}}</view>
+      </view>
+    </view>
+  </navigator>
+</block-->
