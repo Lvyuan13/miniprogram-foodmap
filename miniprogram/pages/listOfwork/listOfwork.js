@@ -10,7 +10,7 @@ Page({
   data: {
     numbers: 0,
     stores: [],
-    type:"",
+    type: "",
     // types: [],
     // type 组成的
   },

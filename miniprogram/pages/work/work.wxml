@@ -1,7 +1,11 @@
-<view class="top" style="background-image:url(../../images/work.jpg)">
-  <view class="top-text"> 工作 </view>
+<!-- <view class="top" style="background-image:url(../../images/study.jpg)">
+  <view class="top-text"> 学习 </view>
+  <view class="top-travel"> study </view>
+</view> -->
+<image class="top" src='{{picture.workpage}}' mode='aspectFill'></image>
+<!-- <image class="top" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559404045622&di=274012da260d333aa84569bbbdab63ae&imgtype=0&src=http%3A%2F%2Fimages.gofreedownload.net%2Fblue-background-picture-150787.jpg' mode='aspectFill'></image> -->
+ <view class="top-text"> 办公 </view>
   <view class="top-travel"> work </view>
-</view>
 <input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
 <view class="page">
   <view class="page__bd">
@@ -18,17 +22,19 @@
     <view class="weui-panel weui-panel_access">
       <view class="weui-panel__ft">
         <view class="weui-cell weui-cell_access weui-cell_link">
-          <view class="weui-cell__bd">职能机构简介</view>
+          <view class="weui-cell__bd">办公事务指南</view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
       </view>
     </view>
     <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">办事地点指南</view>
+      <view class="weui-panel__hd">办公地点指南</view>
       <view class="weui-panel__bd">
-        <block wx:for="{{stores}}" wx:key="_id">
-        <!-- 推荐三个场景 -->
-          <navigator wx:if="{{index<3}}" url="../info/info?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <block wx:for="{{stores}}"  wx:key="_id">
+        <!-- 推荐三个场景 推荐标准评分 -->
+        <!-- 用_id 做索引 跳转到info页 -->
+          <navigator wx:if="{{item.section==section&&item.star>8&&index<10}}"  url="../info/info?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <!-- <text>{{index}}</text> -->
             <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
               <image class="weui-media-box__thumb" src="{{item.images[0]}}" />
             </view>
@@ -40,7 +46,8 @@
         </block>
       </view>
       <view class="weui-panel__ft">
-        <navigator url="../list/list">
+      <!-- 传值section(所属区域）到list页 -->
+        <navigator url="../list/list?section={{section}}">
           <view class="weui-cell weui-cell_access weui-cell_link">
             <view class="weui-cell__bd">查看更多</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -51,7 +58,7 @@
     <view class="weui-panel weui-panel_access">
       <view class="weui-panel__ft">
         <view class="weui-cell weui-cell_access weui-cell_link">
-          <button class='choose' open-type='getUserInfo' bindgetuserinfo='getUserInfo' bindlongpress='getOpenID' lang='zh_CN'>添加办事指南</button>
+          <button class='choose' open-type='getUserInfo' bindgetuserinfo='getUserInfo' bindlongpress='getOpenID' lang='zh_CN'>添加办公指南</button>
         </view>
       </view>
     </view>

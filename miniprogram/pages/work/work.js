@@ -1,7 +1,8 @@
 const mta = require('../../vendor/mta_analysis.js');
 const app = getApp();
 const db = wx.cloud.database()
-const store = db.collection('study');
+const store = db.collection('store');
+// const picture=db.collection('picture');
 const config = require('../../config.js');
 const userInfo = db.collection('userInfo');
 Page({
@@ -14,7 +15,9 @@ Page({
     numbers: 0,
     stores: [],
     type: "",
-    array: ['图书馆', '自习室', '上课地点', '学术讲座']
+    section: "办公",
+    array: ['财务', '行政', '教务']
+    // types:array
 
   },
 
@@ -37,7 +40,8 @@ Page({
               success: res => {
                 if (res.cancel == false && res.confirm == true) {
                   wx.navigateTo({
-                    url: '../addOfstudy/addOfstudy',
+                    // 传标记值，在list中显示不同类型的框架
+                    url: '../addOfwork/addOfwork',
                   })
                 } else {
                   wx.showToast({
@@ -79,10 +83,12 @@ Page({
   // },
   bindPickerChange: function (e) {
     this.setData({
-      type: this.data.array[e.detail.value]
+      type: this.data.array[e.detail.value],
     })
     wx.navigateTo({
-      url: '../listOfstudy/listOfstudy?type=' + this.data.type,
+      // 跳入listOfwork 是为了处理分类查看的情景
+      // list 是为了出来分模块查看的情景
+      url: '../listOfwork/listOfwork?type=' + this.data.type + '&section=' + this.data.section,
     })
   },
   /**
@@ -102,7 +108,17 @@ Page({
         stores: this.data.stores.concat(res.data),
         numbers: this.data.numbers + res.data.length
       });
-    })
+    });
+    db.collection('picture').where(
+      {
+        _id: '232a9248-df41-48c0-9024-acea039ce77f'
+      }
+    ).get().then(res => {
+      this.setData({
+        picture: res.data[0]
+        //仅仅在picture中加入一条记录，所以是加入数据库数组的第一条
+      })
+    });
   },
   /**
    * 页面上拉触底事件的处理函数

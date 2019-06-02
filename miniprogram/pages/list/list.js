@@ -9,7 +9,10 @@ Page({
    */
   data: {
     numbers: 0,
-    stores: []
+    stores: [],
+    types:[],
+    type:""
+    // type 组成的
   },
 
   /**
@@ -18,6 +21,9 @@ Page({
   onLoad: function (options) {
 
     mta.Page.init();
+    // section 是传过来的值,监听来自picker 和 查看更多的时间
+    this.setData({section:options.section,
+    type:options.type});
     this.loadData();
   },
   loadData: function () {

@@ -3,7 +3,7 @@ map{
 }
 .show_all{
   position: absolute;
-  right: 100rpx;
+  right: 290rpx;
   bottom: 100rpx;
   color: #7795f8;
   background-color: rgb(255, 255, 255);

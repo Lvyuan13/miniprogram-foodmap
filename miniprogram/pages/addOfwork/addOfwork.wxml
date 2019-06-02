@@ -13,8 +13,8 @@
   </checkbox-group-->
 
   <!--input placeholder='店铺的门牌号是？' name="type" value='{{type}}'></input-->
-  <view class='desc'>推荐的学习活动</view>
-  <input placeholder='你要推荐什么学习活动呢？' name="contact" value='{{phone}}'></input>
+  <view class='desc'>办公指南</view>
+  <input placeholder='此处的作用？' name="contact" value='{{phone}}'></input>
   <view class='desc'>种类</view>
     <picker bindchange="bindPickerChange" value="{{type}}" range="{{array}}">                
           <view class='choose' >{{type}}</view>
@@ -22,9 +22,9 @@
   <view class='desc'>消费</view>
   <input placeholder='单位是元～（可无）' name="price_per" type="number" value='{{price_per}}'></input>
   <view class='desc'>关键词</view>
-  <input placeholder='比如，安静，高雅' name="keywords" value='{{price_per}}'></input>
+  <input placeholder='比如，拥挤，服务好' name="keywords" value='{{price_per}}'></input>
   <view class='desc'>个人点评</view>
-  <textarea placeholder='对这里的学习环境有什么评价呢？' name="notes" value="{{notes}}"></textarea>
+  <textarea placeholder='对这里的办公事务/人员有什么评价呢？' name="notes" value="{{notes}}"></textarea>
   <view class='desc'>评分（10分制）</view>
   <slider min="1" max="10" show-value name="star" value="10"></slider>
   <view class='desc'>环境图片</view>

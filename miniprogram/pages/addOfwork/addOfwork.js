@@ -9,7 +9,7 @@ Page({
    */
   data: {
     type: '选择一个类别吧',
-    array: ['图书馆', '自习室', '上课地点', '学术讲座']
+    array: ['财务', '行政', '教务']
 
   },
 
@@ -59,7 +59,7 @@ Page({
   bindPickerChange: function (e) {
     this.setData({
       type: this.data.array[e.detail.value],
-      section:'学习',
+      section: '办公',
     })
   },
   createItem: function (event) {
@@ -71,7 +71,7 @@ Page({
       data: {
         ...value,
         type: this.data.type,
-        section:this.data.section,
+        section: this.data.section,
         thumbs_up: 1,
         iconPath: "/images/food.png",
         longitude: this.data.longitude,

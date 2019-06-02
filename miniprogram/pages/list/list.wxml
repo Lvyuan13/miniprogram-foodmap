@@ -1,13 +1,15 @@
 <input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
-<block wx:for="{{stores}}" wx:key="_id">
-  <navigator url="../info/info?id={{item._id}}">
-    <view class="card">
-      <view class="card_title">{{item.title}}</view>
-      <view class="card_infobar">
-        <view class="card_address">{{item.address}}</view>
-        <view class="card_thumbsup">{{item.thumbs_up}}</view>
+<block wx:for="{{stores}}" wx:if="{{item.section==section}}" wx:key="_id">
+  <!-- <block wx:if="{{item.section=section}}"> -->
+    <navigator url="../info/info?id={{item._id}}">
+      <view class="card"> 
+        <view class="card_title">{{item.title}}</view>
+        <view class="card_infobar">
+          <view class="card_address">{{item.address}}</view>
+          <view class="card_thumbsup">{{item.thumbs_up}}</view>
+        </view>
       </view>
-    </view>
-  </navigator>
+    </navigator>
+  <!-- </block> -->
 </block>
 <!-- 一定要改，太也恶心了，这界面 -->

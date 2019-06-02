@@ -5,13 +5,15 @@
     "pages/map/map",
     "pages/list/list",
     "pages/info/info",
+    "pages/study/study",
     "pages/add/add",
     "pages/search/search",
-    "pages/study/study",
     "pages/work/work",
     "pages/food/food",
     "pages/travel/travel",
-    "pages/sport/sport"
+    "pages/sport/sport",
+    "pages/listOfwork/listOfwork",
+    "pages/addOfwork/addOfwork"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
