@@ -2,7 +2,7 @@
   <view class="top-text"> 学习 </view>
   <view class="top-travel"> study </view>
 </view> -->
-<image class="top" src='{{picture.workpage}}' mode='aspectFill'></image>
+<image class="top" src='cloud://sjtu-help-f7d259.736a-sjtu-help-f7d259/work.jpg' mode='aspectFill'></image>
 <!-- <image class="top" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559404045622&di=274012da260d333aa84569bbbdab63ae&imgtype=0&src=http%3A%2F%2Fimages.gofreedownload.net%2Fblue-background-picture-150787.jpg' mode='aspectFill'></image> -->
  <view class="top-text"> 办公 </view>
   <view class="top-travel"> work </view>

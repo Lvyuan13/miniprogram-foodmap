@@ -1,7 +1,7 @@
 <input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
 <block wx:for="{{stores}}" wx:if="{{item.type==type}}" wx:key="_id">
   <!-- <block wx:if="{{item.section=section}}"> -->
-    <navigator url="../info/info?id={{item._id}}">
+    <!-- <navigator url="../info/info?id={{item._id}}">
       <view class="card"> 
         <view class="card_title">{{item.title}}</view>
         <view class="card_infobar">
@@ -9,7 +9,23 @@
           <view class="card_thumbsup">{{item.thumbs_up}}</view>
         </view>
       </view>
-    </navigator>
+    </navigator> -->
+    <navigator url="../info/info?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+    <!-- <view class="card"> 
+        <view class="card_title">{{item.title}}</view>
+        <view class="card_infobar">
+          <view class="card_address">{{item.address}}</view>
+          <view class="card_thumbsup">{{item.thumbs_up}}</view>
+        </view>
+      </view> -->
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="{{item.images[0]}}" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">{{item.title}}</view>
+      <view class="weui-media-box__desc">{{item.notes}}</view>
+    </view>
+  </navigator>
   <!-- </block> -->
 </block>
 <!-- 一定要改，太也恶心了，这界面 -->

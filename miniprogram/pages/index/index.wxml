@@ -3,12 +3,14 @@
     <view class="search-text"> 请输入您想去的目的地</view>
   </button>
   <!-- <image class="index-hd" src="{{picture.map}}"> -->
-  <image class="index-hd" src="{{picture.map}}">
+  <!-- <image class="index-hd" src="https://wx3.sinaimg.cn/mw690/007KwfaXly1g3nq6e0qpfj30go0eatwr.jpg"> -->
+  <image class="index-hd" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559666929277&di=8b7455bb38ebb54ca6ffd69082790547&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F08f790529822720ee0a09f6f70cb0a46f21fab3d.jpg">
+
   </image>
   <view class="index-md">当下热门目的地</view>
   <view class="index-buttonrow">
     <navigator url="../travel/travel">
-      <image class="index-button" src="{{picture.travel}}" plain='true'>
+      <image class="index-button" src="https://wx2.sinaimg.cn/mw690/007KwfaXly1g3nq6dt2kqj304603cjrh.jpg" plain='true'>
       </image>
 
 
@@ -18,13 +20,13 @@
     <text class='info3'>运动</text>
 
     <navigator url="../food/food">
-      <image class="index-button" src="{{picture.food}}" plain='true'>
+      <image class="index-button" src="https://wx3.sinaimg.cn/mw690/007KwfaXly1g3nqdb0804j30go0b4773.jpg" plain='true'>
       </image>
       <!-- <text class='info'>美食</text> -->
 
     </navigator>
     <navigator url="../sport/sport">
-      <image class="index-button" src="{{picture.sport}}" plain='true'>
+      <image class="index-button" src="https://wx3.sinaimg.cn/mw690/007KwfaXly1g3nq6dv3wdj30go0b4tc9.jpg" plain='true'>
       </image>
 
     </navigator>
@@ -35,17 +37,17 @@
     <text class='info2'>学习</text>
     <text class='info3'>地图</text>
     <navigator url="../work/work">
-      <image class="index-button" src="{{picture.office}}" plain='false'>
+      <image class="index-button" src="https://wx4.sinaimg.cn/mw690/007KwfaXly1g3nq6du0dfj30go0b476b.jpg" plain='false'>
 
       </image>
 
     </navigator>
     <navigator url="../study/study">
-      <image class="index-button" src="{{picture.study}}" plain='true'></image>
+      <image class="index-button" src="https://wx4.sinaimg.cn/mw690/007KwfaXly1g3nq6dtl48j30go0b93zn.jpg" plain='true'></image>
 
     </navigator>
     <navigator url="../map/map">
-      <image class="index-button" src="{{picture.other}}" plain='true'></image>
+      <image class="index-button" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559537010111&di=a34c034ec19ea3d742b1458a2ed8587d&imgtype=0&src=http%3A%2F%2Fwww.eeworld.com.cn%2Fmp%2Fuploads%2F2018%2F08%2F24%2Fd6a4829e-a759-11e8-be54-001e676a89bd.jpg" plain='true'></image>
 
     </navigator>
   </view>

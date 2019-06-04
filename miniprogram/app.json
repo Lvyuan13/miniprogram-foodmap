@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/start/start",
     "pages/index/index",
     "pages/map/map",
     "pages/list/list",
@@ -13,12 +13,14 @@
     "pages/travel/travel",
     "pages/sport/sport",
     "pages/listOfwork/listOfwork",
-    "pages/addOfwork/addOfwork"
+    "pages/addOfwork/addOfwork",
+    "pages/my/my"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+     "backgroundColor": "#F6F6F6",
+ 
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#5CACEE",
     "navigationBarTitleText": "交大小帮手",
     "navigationBarTextStyle": "black"
   },
@@ -26,6 +28,27 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于创建新的攻略"
     }
+  },
+  "tabBar": {
+    "color": "#9BABBA",
+    "selectedColor": "#495056",
+    "borderStyle": "white",
+    "backgroundColor": "#5CACEE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tar-home.png",
+        "selectedIconPath": "static/images/tar-home-on.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人",
+        "iconPath": "static/images/tar-topic.png",
+        "selectedIconPath": "static/images/tar-topic-on.png"
+      }
+     
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

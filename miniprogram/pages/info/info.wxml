@@ -39,4 +39,3 @@
     <button class='button navigate' bindtap='navigate'>导航</button>
   </view>
 </block>
-<!-- 界面好丑，赶紧换 -->

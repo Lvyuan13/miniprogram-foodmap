@@ -7,7 +7,7 @@ map{
   bottom: 100rpx;
   color: #7795f8;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  box-shadow: 0 4px 6px  rgb(255, 255, 255), 0 1px 3px  rgb(255, 255, 255);
 }
 .cover{
   color: #fff;
@@ -20,12 +20,12 @@ map{
   left: 100rpx;
   bottom: 100rpx;
   border-radius: 50rpx;
-  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  text-shadow: 0 1px 3px#fff;
 }
 .add_me{
   font-size:30rpx;
   color: #fff;
-  background-color: rgb(62, 207, 142);
+  background-color: #5CACEE;
   width: 450rpx;
   padding:20rpx;
   position: absolute;

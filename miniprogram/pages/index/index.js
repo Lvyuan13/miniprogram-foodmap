@@ -4,7 +4,7 @@ const app = getApp();
 const config = require('../../config.js');
 const db = wx.cloud.database()
 const store = db.collection('store');
-const picture = db.collection('picture');
+// const picture = db.collection('picture');
 const userInfo = db.collection('userInfo');
 Page({
 
@@ -33,16 +33,16 @@ Page({
   },
   loadData: function () {
     //从云端加载图片数据，主界面用到的图片全部上传到了名为picture的云端中
-    db.collection('picture').where(
-      {
-        _id:'232a9248-df41-48c0-9024-acea039ce77f'
-      }
-    ).get().then(res=>{
-      this.setData({
-        picture: res.data[0]
-        //仅仅在picture中加入一条记录，所以是加入数据库数组的第一条
-      })
-    });
+    // db.collection('picture').where(
+    //   {
+    //     _id:'232a9248-df41-48c0-9024-acea039ce77f'
+    //   }
+    // ).get().then(res=>{
+    //   this.setData({
+    //     picture: res.data[0]
+    //     //仅仅在picture中加入一条记录，所以是加入数据库数组的第一条
+    //   })
+    // });
   },
   /**
    * 生命周期函数--监听页面显示

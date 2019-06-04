@@ -3,7 +3,7 @@
 .index-hd {
   background-size: 100%;
   width: 750rpx;
-  height: 600rpx;
+  height: 510rpx;
   vertical-align: bottom;
   z-index: -1;
 }
@@ -14,7 +14,7 @@
   /* margin-left: 50rpx;
   <image class='search-icon' src='resources/search-icon.png'></image>
    */
-  margin-top: 400rpx;
+  margin-top: 300rpx;
   position: absolute;
   background-color: rgb(255, 255, 255);
   width: 740rpx;
